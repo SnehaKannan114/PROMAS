@@ -1,0 +1,4 @@
+function validateLogin()
+{
+	var username;
+}

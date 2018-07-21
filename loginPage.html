@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+	<head>
+		<meta charset = "UTF-8">
+		<title>Login</title>
+		<link rel = "stylesheet" type = "text/css"  href = "./css/style.css" />
+		<link rel = "stylesheet" type = "text/css"  href = "./css/index.css" />
+
+		<script type = "text/javascript" src="./js/home.js"></script>
+		
+	</head>
+
+	<body>
+		<div id="header">
+			<div class="topnav" id="myTopnav">
+				<div class="links">
+					<a href="#about">About Us</a>				
+					<a href="#forum">Features</a>
+					<a href="./home.html">Home</a>
+				</div>
+			</div>		
+		</div>
+
+		<div id="content">
+			<div class="container">
+				<div class="login-box fadeInUp">
+					<div class="box-header">
+						<div class = "login-box-header">Log In</div>
+					</div>
+					<form action="./php/login.php" method="post">
+						<label for="username">Username</label>
+						<br/>
+						<input type="text" id="username" name="username">
+						<br/>
+						<label for="password">Password</label>
+						<br/>
+						<input type="password" id="password" name="password">
+						<br/>
+						<button type="submit">Sign In</button>
+						<br/>
+					</form>
+					<a href="#"><p class="small">Forgot your password?</p></a>
+					<a href="./registerPage.html"><p class="small">Don't have an account?</p></a>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<p id="copyright">
+				&#169Copyrights BMS College of Engineering
+			</p>
+			<p id="dept">
+				Dept. of ISE
+			</p>
+		</div>
+		<script type = "text/javascript" src="./js/home.js"></script>
+	</body>
+</html>

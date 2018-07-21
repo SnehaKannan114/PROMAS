@@ -1,0 +1,142 @@
+.login-box-header {
+	text-transform: uppercase;
+	color: white;
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-size: 1.4em;
+	line-height: 2.8em;
+}
+
+a{
+	text-decoration: none;
+}
+
+.small {
+	text-decoration: none;
+	color: #666;
+	font-size: 0.9em;
+	margin: 10px 0 0;
+	margin-bottom: 0;
+}
+
+.small:hover {
+	color: #aeaeae;
+}
+
+/* Layout */
+
+.login-box {
+	background-color: white;
+	max-width: 340px;
+	margin: 0 auto 40px;
+	position: relative;
+	top: 80px;
+	padding-bottom: 30px;
+	border-radius: 5px;
+	box-shadow: 0 5px 50px rgba(0,0,0,0.4);
+	text-align: center;
+}
+
+.registerForm{
+	max-width: 500px;
+}
+
+.registerForm fieldset{
+  border: none;
+}
+.login-box .box-header {
+	background-color: #3AACDE;
+	margin-top: 0;
+	border-radius: 5px 5px 0 0;
+}
+
+.login-box label {
+	font-weight: 700;
+	font-size: .8em;
+	color: #888;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	line-height: 3em;
+
+}
+
+.login-box input {
+	margin-bottom: 20px;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	font-size: .9em;
+	color: #888;
+	width: 250px;
+}
+
+.login-box input:focus {
+	outline: none;
+	border-color: #3AACDE;
+	transition: 0.5s;
+	color: #3AACDE;
+}
+
+.login-box button, input[type=submit] {
+	margin-top: 5px;
+	margin-bottom: 20px;
+	border: 0;
+	border-radius: 2px;
+	color: white;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 0.7em;
+	letter-spacing: 1px;
+	background-color: #3AACDE;
+	cursor:pointer;
+	outline: none;
+}
+
+.login-box input[type=submit]:hover button:hover{
+	opacity: 0.7;
+	transition: 0.5s;
+}
+
+.login-box input[type=submit]:hover button:hover{
+	opacity: 0.7;
+	transition: 0.5s;
+}
+
+.selected {
+	color: #665851!important;
+	transition: 0.5s;
+}
+
+/* Animation Delay */
+#logo {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 2s;
+}
+
+.login-box {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+}
+
+.registerForm legend {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	padding-top: 15px;
+	text-transform: uppercase;
+}
+
+.registerForm .bigBullet {
+	background: #3AACDE;
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	font-size: 0.8em;
+	margin-right: 6px;
+	line-height: 30px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	border-radius: 15px 15px 15px 0px;
+}
+

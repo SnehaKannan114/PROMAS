@@ -1,0 +1,296 @@
+
+.slidingButton {
+  background-color: #6b7077;
+  border-radius: 8px;
+  border: none;
+  display: inline-block;
+  color: #FFFFFF;
+  font-size: 22px;
+  width: 180px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 4.5em;
+  margin-right: 2em;
+  padding: 15px;
+  margin-left: 40%;
+  text-align: center;
+  vertical-align:middle
+}
+
+.slidingButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.slidingButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.slidingButton:hover span {
+  padding-right: 25px;
+}
+
+.slidingButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.tasktable {
+  margin-top: 5em;
+  font-size: 150%;
+  min-width: 700px;
+  border-collapse: collapse;
+
+}
+.tasktable th {
+  border-bottom: 1px solid black;
+  border-top : 1px solid black;
+  background-color: #799fc9;
+  color:white;
+}
+.tasktable th,td{
+  padding: 10px;
+  text-align:center;
+  
+}
+.tasktable tr {
+    background-color: #d5e4f5;
+    border-top: 1px solid white;
+    
+}
+.tasktable tr:hover {
+    
+    background-color: #a4c1e1;
+    margin-top:30px;
+    border-top: transparent;
+}
+
+.login-box-header {
+	text-transform: uppercase;
+	color: white;
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-size: 1.4em;
+	line-height: 2.8em;
+}
+
+a{
+	text-decoration: none;
+}
+
+.small {
+	text-decoration: none;
+	color: #666;
+	font-size: 0.9em;
+	margin: 10px 0 0;
+	margin-bottom: 0;
+}
+
+.small:hover {
+	color: #aeaeae;
+}
+
+/* Layout */
+
+.login-box {
+	background-color: white;
+	max-width: 340px;
+	margin: 0 auto 40px;
+	position: relative;
+	top: 80px;
+	padding-bottom: 30px;
+	border-radius: 5px;
+	box-shadow: 0 5px 50px rgba(0,0,0,0.4);
+	text-align: center;
+}
+
+.registerForm{
+	max-width: 500px;
+}
+
+.registerForm fieldset{
+  border: none;
+}
+.login-box .box-header {
+	background-color: #3AACDE;
+	margin-top: 0;
+	border-radius: 5px 5px 0 0;
+}
+
+.login-box label {
+	font-weight: 700;
+	font-size: .8em;
+	color: #888;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	line-height: 3em;
+
+}
+
+.login-box input {
+	margin-bottom: 20px;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	font-size: .9em;
+	color: #888;
+	width: 250px;
+}
+
+.login-box input:focus {
+	outline: none;
+	border-color: #3AACDE;
+	transition: 0.5s;
+	color: #3AACDE;
+}
+
+.login-box button, input[type=submit] {
+	margin-top: 5px;
+	margin-bottom: 20px;
+	border: 0;
+	border-radius: 2px;
+	color: white;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 0.7em;
+	letter-spacing: 1px;
+	background-color: #3AACDE;
+	cursor:pointer;
+	outline: none;
+}
+
+.login-box input[type=submit]:hover, button:hover{
+	opacity: 0.7;
+	transition: 0.5s;
+}
+
+.login-box input[type=submit]:hover, button:hover{
+	opacity: 0.7;
+	transition: 0.5s;
+}
+
+.selected {
+	color: #665851!important;
+	transition: 0.5s;
+}
+
+/* Animation Delay */
+#logo {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 2s;
+}
+
+.login-box {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+}
+
+.registerForm legend {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	padding-top: 15px;
+	text-transform: uppercase;
+}
+
+.registerForm .bigBullet {
+	background: #3AACDE;
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	font-size: 0.8em;
+	margin-right: 6px;
+	line-height: 30px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	border-radius: 15px 15px 15px 0px;
+}
+
+div.tabRegister {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+div.tabRegister button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    min-width: 50%;
+}
+
+/* Change background color of buttons on hover */
+div.tabRegister button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tabRegister button.active {
+    background-color: #ccc;
+}
+
+.tabcontent {
+    display: none;
+    border-top: none;
+}
+
+.completedBtn{
+	color: #fff;
+	left: 25%;
+  	display: block;
+  	position: relative;
+  	width: 200px;
+  	height: 80px;
+  	text-align: center;
+  	line-height: 80px;
+  	background-color: red;
+  	font-size: 28px;
+  	text-transform: uppercase;
+}
+
+.submitFile legend{
+	display: table;
+	margin-left: 6.5em;
+	border: none;
+	padding-top: 2em;
+
+}
+
+.submitFile input[type=submit]{
+	margin-top: 0;
+	color:black;
+	background-color:white;
+	border: solid black 1px;
+	margin-left: 15em;
+}
+
+.submitFile input[type=file] {
+	margin-top: 0;
+	margin-bottom: 20px;
+	margin-left: 3em;
+	border: 0;
+	border-radius: 2px;
+	color: black;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 1em;
+	letter-spacing: 1px;
+	background-color: #DDE0E1;
+	cursor:pointer;
+	outline: none;
+}

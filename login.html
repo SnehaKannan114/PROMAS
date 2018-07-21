@@ -4,6 +4,7 @@
 		<meta charset = "UTF-8">
 		<title>Login</title>
 		<link rel = "stylesheet" type = "text/css"  href = "./css/index.css" />
+		<script type="text/javascript" src="./js/validation"></script>
 	</head>
 
 	<body>
@@ -13,12 +14,6 @@
 					<a href="#about">About Us</a>				
 					<a href="#forum">Features</a>
 					<a href="./home.html">Home</a>
-				</div>
-			
-				<div>
-					<div class="drop" id="main">
-						<a href="#" class="icon" onclick="openSideNav()">&#9776;</a>
-					</div> 
 				</div>
 			</div>		
 		</div>
@@ -30,12 +25,15 @@
 				</p>
 			</div>
 			<p>Join us now to get started on your projects!</p>
-			<form method="get" action="./home.html">
-				<p id="buttonLinks">
-					<button class="button loginButton">Login</button>
-					<button class="button loginButton">Sign Up</button>
-				</p>
-			</form>	
+			<p id="buttonLinks">
+					<a href="./loginPage.html">
+						<button class="button loginButton" onclick = "validateLogin()">Login</button>
+					</a>
+					<a href="./registerPage.html">
+						<button class="button loginButton">Sign Up</button>
+					</a>
+			</p>
+			
 			
 		</div>
 

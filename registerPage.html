@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+	<head>
+		<meta charset = "UTF-8">
+		<title>Login</title>
+		<link rel = "stylesheet" type = "text/css"  href = "./css/style.css" />
+		<link rel = "stylesheet" type = "text/css"  href = "./css/index.css" />
+
+		<script type = "text/javascript" src="./js/home.js"></script>
+		
+	</head>
+
+	<body>
+		<div id="header">
+			<div class="topnav" id="myTopnav">
+				<div class="links">
+					<a href="#about">About Us</a>				
+					<a href="#forum">Features</a>
+					<a href="./home.html">Home</a>
+				</div>				
+			</div>		
+		</div>
+
+		<div id="content">
+			<div class="container">
+				<div class="tabRegister">
+				 	<button class="tablinks active" onclick="openUserType(event, 'Student')">Student</button>
+				  	<button class="tablinks" onclick="openUserType(event, 'Professor')">Professor</button>
+				</div>
+
+				<div id="Student" class="tabcontent">
+					<div class="login-box fadeInUp registerForm">
+						<div class="box-header login-box-header">
+							Register
+						</div>
+						<form action="./php/registerStudent.php" method="POST">
+							<fieldset>
+								<legend><span class="bigBullet">1</span>Personal Information</legend>
+	    						<br/>
+								<label for="name">Name</label>
+								<br/>
+								<input type="text" id="name" name="name" required>
+								<br/>
+								<label for="team">Team Name</label>
+								<br/>
+								<input type="text" id="team" name="team" required>
+								<br/>			
+												
+							</fieldset>
+
+							<fieldset>
+								<legend><span class="bigBullet">2</span>College Information</legend>
+	    						<label for="USN">USN</label>
+								<br/>
+								<input type="text" id="USN" name="USN" required>
+								<br/>			
+								<label for="sem">Semester</label>
+								<br/>
+								<input type="text" id="sem" name="sem" required>
+								<br/>			
+								<label for="department">Department</label>
+								<br/>
+								<input type="text" id="department" name="department" required>
+								<br/>			
+								
+												
+							</fieldset>
+
+							<fieldset>
+								<legend><span class="bigBullet">3</span>Contact Information</legend>
+	    						<label for="email">Email</label>
+								<br/>
+								<input type="text" id="email" name="email" required>
+								<br/>
+								<label for="phone">Phone Number</label>
+								<br/>
+								<input type="text" id="phone" name="phone" required>
+								<br/>
+							</fieldset>
+
+							<fieldset>
+								<legend><span class="bigBullet">5</span>Account</legend>
+	    						<label for="username">Username</label>
+								<br/>
+								<input type="text" id="username" name="username" required>
+								<br/>
+								<label for="passwd">Password</label>
+								<br/>
+								<input type="password" id="user_passwd" name="user_passwd" required>
+								<br>
+								<label for="confpasswd">Confirm Password</label>
+								<br/>
+								<input type="password" id="confpasswd" required><p id="doNotMatch">Do</p>
+								<br/>
+
+							</fieldset>
+							 <input type="submit" value="Submit" onclick="return Validate()">
+							 <!--<button type="submit">Register</button>-->
+							<br/>
+							<script type="text/javascript">
+							    function Validate() {
+							        var password = document.getElementById("txtPassword").value;
+							        var confirmPassword = document.getElementById("txtConfirmPassword").value;
+							        if (password != confirmPassword) {
+							            alert("Passwords do not match.");
+							            return false;
+							        }
+							        return true;
+							    }
+							</script>
+						</form>
+					</div>
+				</div>
+
+				<div id="Professor" class="tabcontent">
+				  	<div class="login-box fadeInUp registerForm">
+						<div class="box-header login-box-header">
+							Register
+						</div>
+						<form action="./php/registerProf.php" method="POST">
+							<fieldset>
+								<legend><span class="bigBullet">1</span>Personal Information</legend>
+	    						<br/>
+								<label for="name">Name</label>
+								<br/>
+								<input type="text" id="name" name="name">
+								<br/>									
+												
+							</fieldset>
+
+							<fieldset>
+								<legend><span class="bigBullet">2</span>College Information</legend>
+	    						<label for="department">Department</label>
+								<br/>
+								<input type="text" id="department" name="department">
+								<br/>			
+								
+												
+							</fieldset>
+
+							<fieldset>
+								<legend><span class="bigBullet">3</span>Contact Information</legend>
+	    						<label for="email">Email</label>
+								<br/>
+								<input type="text" id="email" name="email">
+								<br/>
+								<label for="phone">Phone Number</label>
+								<br/>
+								<input type="text" id="phone" name="phone">
+								<br/>
+							</fieldset>
+
+							<fieldset>
+								<legend><span class="bigBullet">5</span>Account</legend>
+	    						<label for="username">Username</label>
+								<br/>
+								<input type="text" id="username" name="username">
+								<br/>
+								<label for="passwd">Password</label>
+								<br/>
+								<input type="password" id="user_passwd" name="user_passwd">
+								<br>
+								<label for="confpasswd">Confirm Password</label>
+								<br/>
+								<input type="password" id="confpasswd" name="passwd" onclick="validatePass">
+								<br/>
+
+							</fieldset>
+							 <input type="submit" value="Submit" onclick="validatePass">
+							 <!--<button type="submit">Register</button>-->
+							<br/>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</body>
+</html>

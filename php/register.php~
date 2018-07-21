@@ -1,0 +1,77 @@
+<html>
+<head>
+</head>
+<body>
+<?php
+
+//phpinfo();
+/* Attempt MySQL server connection. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+$link = mysqli_connect("localhost", "root", "", "PROMAS_DB");
+
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+ 
+// Prepare an insert statement
+$sql = "INSERT INTO users (username, passwd, type) VALUES (?, ?, ?)";
+ 
+if($stmt = mysqli_prepare($link, $sql)){
+    // Bind variables to the prepared statement as parameters
+    mysqli_stmt_bind_param($stmt, "ssi", $username, $mypassword, $type_user);
+    
+    $username = $_REQUEST['username'];
+    $mypassword = $_REQUEST['user_passwd'];
+    $type_user = 3;
+    
+    // Attempt to execute the prepared statement
+    if(mysqli_stmt_execute($stmt)){
+        echo "Records inserted successfully.";
+    } else{
+        echo "ERROR: Could not execute query: $sql. " . mysqli_error($link);
+    }
+} else{
+    echo "ERROR: Could not prepare query: $sql. " . mysqli_error($link);
+}
+ 
+// Close statement
+mysqli_stmt_close($stmt);
+ 
+
+// Prepare an insert statement
+$sql = "INSERT INTO student (username, name, USN, department, semester, phone, email) VALUES (?, ?, ?, ?, ?, ?, ?)";
+ 
+if($stmt = mysqli_prepare($link, $sql)){
+    // Bind variables to the prepared statement as parameters
+    mysqli_stmt_bind_param($stmt, "sssiiis", $username, $name, $USN, $dept, $sem, $phone, $email);
+    
+    $username = $_REQUEST['username'];
+    $name = $_REQUEST['name'];
+    $USN = $_REQUEST['USN'];
+    $dept = 5;
+    $sem = $_REQUEST['sem'];
+    $phone = $_REQUEST['phone'];
+    $email = $_REQUEST['email'];
+    
+    // Attempt to execute the prepared statement
+    if(mysqli_stmt_execute($stmt)){
+        echo "Records inserted successfully.";
+    } else{
+        echo "ERROR: Could not execute query: $sql. " . mysqli_error($link);
+    }
+} else{
+    echo "ERROR: Could not prepare query: $sql. " . mysqli_error($link);
+}
+ 
+// Close statement
+mysqli_stmt_close($stmt);
+// Close connection
+mysqli_close($link);
+?>
+    <h3>You have successfully registered</h3>
+    <a href="../loginPage.html">
+        <button>Click here to continue</button>
+    </a>
+</body>
+</html>
